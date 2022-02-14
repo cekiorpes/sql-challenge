@@ -10,3 +10,10 @@ CREATE TABLE employees (
 	hire_date DATE
 );
 
+DROP TABLE IF EXISTS departments;
+
+CREATE TABLE departments (
+	dept_no VARCHAR PRIMARY KEY,
+	dept_name TEXT
+);
+
