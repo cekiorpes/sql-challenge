@@ -10,3 +10,5 @@ WHERE EXTRACT (year FROM hire_date) = 1986;
 --Where hire_date LIKE %1986?
 
 --Managers of departments (department number, department name, employee number, last name, first name)
+--Inner join on manager and employee (on emp_no)
+--Inner join on manager and department (on dept_no)
