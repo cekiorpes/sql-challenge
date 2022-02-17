@@ -34,3 +34,17 @@ FROM employees e
 	INNER JOIN dept_emp de ON de.emp_no = e.emp_no
 	INNER JOIN departments d ON d.dept_no = de.dept_no
 WHERE dept_name = 'Sales';
+
+--Employees in sales and developement departments (employee number, last name, first name, department name)
+SELECT e.emp_no, e.last_name, e.first_name, d.dept_name
+FROM employees e
+	INNER JOIN dept_emp de ON de.emp_no = e.emp_no
+	INNER JOIN departments d ON d.dept_no = de.dept_no
+WHERE dept_name = 'Sales'
+	OR dept_name = 'Development';
+	
+--Frequency count of employee last names (descending order)
+SELECT last_name, COUNT(last_name) AS Frequency
+FROM employees
+GROUP BY last_name
+ORDER BY Frequency DESC;
