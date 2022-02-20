@@ -2,12 +2,11 @@
 SELECT e.emp_no, e.last_name, e.first_name, e.sex, s.salary
 FROM employees e
 	INNER JOIN salaries s ON e.emp_no = s.emp_no;
-	
+
 --Employees hired in 1986 (first name, last name, hire date)
 SELECT e.first_name, e.last_name, e.hire_date
 FROM employees e
 WHERE EXTRACT (year FROM hire_date) = 1986;
---Where hire_date LIKE %1986?
 
 --Managers of departments (department number, department name, employee number, last name, first name)
 SELECT m.dept_no, d.dept_name, e.emp_no, e.last_name, e.first_name
@@ -27,7 +26,7 @@ SELECT first_name, last_name, sex
 FROM employees
 WHERE first_name = 'Hercules'
 	AND last_name LIKE 'B%';
-	
+
 --Employees in the sales department (employee number, last name, first name, department name)
 SELECT e.emp_no, e.last_name, e.first_name, d.dept_name
 FROM employees e
@@ -42,7 +41,7 @@ FROM employees e
 	INNER JOIN departments d ON d.dept_no = de.dept_no
 WHERE dept_name = 'Sales'
 	OR dept_name = 'Development';
-	
+
 --Frequency count of employee last names (descending order)
 SELECT last_name, COUNT(last_name) AS Frequency
 FROM employees
