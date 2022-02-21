@@ -8,7 +8,7 @@ An ERD and table schemas were created for each of the CSV files and created in P
 ### *Data Analysis*
 SQL queries were created to analyze the employee data - employee details, employees hired in 1986, manager details, employee departments, etc.
 
-Bonus
+Bonus:
 The database was also uploaded into Pandas and analyzed to graphically display the most common salary range for employees as well as the average salary by title. 
 
 
